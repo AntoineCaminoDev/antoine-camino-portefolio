@@ -44,7 +44,7 @@ export default function Reality ({ basculerActivation })  {
 
   const gridHelper = new THREE.GridHelper(10, 10);
  
-  console.log(active);
+
 
   useFrame((state) => {
     

@@ -140,7 +140,7 @@ export const Experience = (props) => {
       })
 
 
-      console.log(state.camera.position, state.camera.rotation)
+      
 
     });
 
