@@ -1,4 +1,4 @@
-import {  PresentationControls} from '@react-three/drei'
+import {  PresentationControls,useCursor} from '@react-three/drei'
 import * as THREE from 'three'
 import { useFrame} from '@react-three/fiber'
 import { useRef, useState } from 'react'
@@ -32,14 +32,14 @@ export const Experience = (props) => {
   const [Activated, setActivated] = useState(false)
   const [clickedMesh, setClickedMesh] = useState(null)
   const [zIndexRange, setZIndexRange] = useState([2, 0]);
-  
+  const [hovered,sethovered]=useState(null)
   // Étape 2: Définir une fonction pour basculer l'état lorsque vous cliquez sur l'image
 
   const basculerActivation = (objectId, zIndexRange) => {
     setClickedMesh(objectId)
     setActivated(!Activated)
     setZIndexRange(zIndexRange)
-    
+    sethovered(!hovered)
 
 
   };
@@ -68,7 +68,7 @@ export const Experience = (props) => {
   }
 
  
-
+ 
 
 
 

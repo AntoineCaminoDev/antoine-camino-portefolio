@@ -18,8 +18,8 @@ export default function Image({ basculerActivation }, props) {
   const atlas4= useGLTF("./models/atlaslv4.glb");
   const earth= useGLTF("./models/earthPic.glb");
 
- 
 
+ 
 
   // const { position } = useControls({
   //   position: {
@@ -27,12 +27,16 @@ export default function Image({ basculerActivation }, props) {
   //     step: 0.01
   //   }
   // })
+  
 // position.x,position.y,position.z
+
+//onPointerEnter={()=}
   const buttonClick = (objectId) => {
 
     basculerActivation(objectId)
+    
   }
-  
+ 
 
   return (
     <>
