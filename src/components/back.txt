@@ -1,0 +1,791 @@
+<PortalStage 
+      name="vitrine"
+      position={[-70.05, 6, -19.683]}
+      rotation={[0, -0.003, 0]}
+      
+      texture={"./textures/anime_art_style_a_water_based_pokemon_like_environ.jpg"}
+      active={active}
+        setActive={setActive}
+      >
+     
+
+      </PortalStage>
+
+      <PortalStage 
+      name="boutique"
+       position={[-62.037, 1.495, -18.529]}
+       rotation={[0, -0.242, 0]}
+      
+      texture={"./textures/anime_art_style_earth_from_space.jpg"}
+      active={active}
+        setActive={setActive}
+      >
+     
+
+      </PortalStage>
+
+      <PortalStage 
+      name="seo"
+       position={[-55.2, 1.247, -13.963]}
+       rotation={[0, -0.827, 0]}
+      
+      texture={"./textures/AdobeStock_226375061.jpeg"}
+      active={active}
+      setActive={setActive}
+      >
+     
+
+      </PortalStage>
+
+
+const PortalStage=({Children,texture,name,active,setActive,...props})=>{
+
+  const map = useTexture(texture)
+  console.log(active);
+  
+  
+  return(<group {...props}>
+
+    <RoundedBox args={[2,3,0.1]} onDoubleClick={()=>{ setActive(active===name?null:name)}}>
+      <MeshPortalMaterial  blend={ active === name ? 1 : 0}>
+        <ambientLight intensity={1}/>
+        <Environment preset="sunset"/>
+        {Children}
+        <mesh>
+          <sphereGeometry args={[5,64,64]}/>
+          <meshStandardMaterial map={map} side={THREE.BackSide}/>
+        </mesh>
+      </MeshPortalMaterial>
+
+    </RoundedBox>
+    
+  </group>)}
+
+
+
+  position={[10,2,-60]}
+
+---------------------------------------------------------------------------------
+  tp level 1
+
+  const [active, setActive] = useState(false);
+  
+ 
+ const NV1= useRef();
+
+
+ const basculerActivation = () => {
+  const newState = !active;
+  setActive(newState);
+  props.setActiveState(newState); // pass new state to the parent  
+  
+  mettre sa au dans le mesh en question 
+  onClick={basculerActivation}
+
+  ref={NV1}
+};
+--------------------------------------------------------
+// portail 
+<mesh
+        name="vitrine"
+        ref={meshRef}
+        castShadow
+        receiveShadow
+        geometry={nodes.portailVitrine.geometry}
+        material={nodes.portailVitrine.material}
+        position={[-70.05, 1.656, -19.683]}
+        rotation={[0, -0.003, 0]}
+        active={active}
+        setActive={setActive}
+        onDoubleClick={() => setActive(active===meshRef.current.name?null:meshRef.current.name)}
+        
+
+        
+        
+       
+      >
+        <MeshPortalMaterial ref={vitrineRef} >
+        <ambientLight intensity={1} />
+        <Environment preset="sunset" />
+        
+        <mesh>
+
+          <sphereGeometry args={[10, 64, 64]} />
+
+
+          <meshStandardMaterial map={map1} side={THREE.BackSide} />
+
+
+        </mesh>
+
+
+      </MeshPortalMaterial>
+
+
+      </mesh>
+
+<div classname="Moncanva">
+
+<div>
+  <div>
+    <div>div 3</div>
+  </div>
+</div>
+
+</div>
+
+
+
+tp sur ma photo
+
+if (activated) {
+
+    useFrame((state) => {
+
+
+      gsap.to(state.camera.position, {
+        x: 2,
+        z: -3,
+
+
+        duration: 1
+
+
+      })
+
+      gsap.to(state.camera.rotation, {
+        y: -1.6,
+        x: 0.1,
+
+
+
+        duration: 1
+      })
+
+
+
+
+
+    });
+
+  } else {
+    useFrame((state) => {
+
+      gsap.to(state.camera.position, {
+        x: 1,
+        y: 2,
+        z: 6,
+
+
+        duration: 2
+      })
+
+      gsap.to(state.camera.rotation, {
+        x: -0.3217505543966423,
+
+        y: 0.1568156853444008,
+        z: 0.05201097082184465,
+
+
+
+        duration: 2
+      })
+
+
+
+    })
+
+
+  }
+
+
+
+  // i frame 
+
+   <mesh
+      castShadow
+      receiveShadow
+      geometry={nodes.ecran_de_selection_lv3.geometry}
+      material={materials.metal}
+      position={[-143.393, 4.46, 1.605]}
+      onClick={() => buttonClick("ecranLV3", activated ? [2, 0] : [4, 0])} 
+    > 
+      <Html   wrapperClass="htmlScreen"  prepend  zIndexRange={zIndexRange}  width={2000} height={1000} transform occlude={NoBlending} distanceFactor={5} position={[-0.2,0,0]}  ref={planeRef } >
+          <div >
+          <Pages/>{/* <iframe src="https://bruno-simon.com/html/" /> */}
+          </div>
+      </Html>
+    
+
+    </mesh>
+
+
+    ------------------------------
+    lv1
+    img moi
+    onClick={() => buttonClick("mesh1")}
+     img
+    onClick={() => buttonClick("mesh2")}
+
+-------------------------------------------
+
+lv3 avec bouton a pars
+
+      <mesh
+        name="bouton_ON"
+        castShadow
+        receiveShadow
+        geometry={nodes.bouton_ON.geometry}
+        material={materials.level3}
+        position={[-131.56, 3.057, 1.582]}
+        onClick={() =>{{ console.log('ici'),buttonClick("ecranLV3", activated ? [2, 0]  : [4, 0])}  }}
+      />
+
+      <mesh
+        name="ecran_"
+        castShadow
+        receiveShadow
+        geometry={nodes.ecran_.geometry}
+        material={materials.blanc}
+        position={[-131.56, 4.107, 0.802]}
+      >
+
+        <Html wrapperClass="htmlScreen" prepend zIndexRange={zIndexRange} width={2000} height={1000} transform occlude={NoBlending} distanceFactor={5} position={[-0.2, 0, 0]} ref={planeRef} >
+          <div>
+            <Pages activerMachine={activerMachine} />
+          </div>
+        </Html>
+
+
+      </mesh>
+
+
+
+
+lv2 
+
+// const Blendclick = (objectId) => {
+
+
+  //   setActivated((prevActivated) => !prevActivated);
+
+  //   basculerActivation(objectId);
+    
+  //   console.log(blendref.current.blend)
+    
+
+  // }
+
+
+
+  // if (activated) {
+  //   console.log('ACTIVER');
+  // } else { console.log('DESACTIVER') }
+
+  // useEffect(() => {
+  //   if (blendref.current) {
+  //     blendref.current.blend = activated ? 1 : 0;
+      
+  //     console.log(activated ? "ACTIVER" : "DESACTIVER", blendref.current.blend);
+  //   }
+  // }, [activated]);
+
+
+
+
+   useFrame((state, delta) => {
+
+    const worldOpen = activated === objectid
+    easing.damp(blendref.current, "blend", worldOpen ? 1 : 0, 0.2, delta)
+
+  })
+
+   // const handleClick = () => {
+  //   //   setActive(active===meshRef.current.name?null:meshRef.current.name)
+  //   console.log(seoRef.current.blending)
+  //   seoRef.current.blending = 0
+  //   // console.log(active);
+  // };
+
+
+
+
+
+
+
+
+-------------------
+import {
+  CameraControls,
+  Environment,
+  MeshPortalMaterial,
+  RoundedBox,
+  Text,
+  useCursor,
+  useTexture,
+  PresentationControls
+} from "@react-three/drei";
+import { useFrame, useThree } from "@react-three/fiber";
+import { gsap } from "gsap";
+import { easing } from "maath";
+import { useEffect, useRef, useState } from "react";
+import * as THREE from "three";
+import { Cactoro } from "./Cactoro";
+import { DragonEvolved } from "./Dragon_Evolved";
+import { Fish } from "./Fish";
+
+import { useControls } from "leva";
+
+
+//position={[position.x,position.y,position.z]}
+
+
+// import Leve01 from "./Level01.jsx"
+// import C1 from "./Connector.jsx"
+// import Leve02 from "./Modeletest2.jsx"
+
+
+export default function Experience ({ basculerActivation })  {
+  const [active, setActive] = useState(false);
+  const [hovered, setHovered] = useState(null);
+  
+  const [objectid, setObjectid] = useState(null);
+
+
+  useCursor(hovered);
+  const controlsRef = useRef();
+  const blendref =useRef()
+  const scene = useThree((state) => state.scene);
+
+  const {position}=useControls({
+    position:{
+      value:{x:-14,y:2,z:-5},
+      step:0.01
+    }
+  })
+
+  // const buttonClick = (objectId) => {
+
+  //   basculerActivation(objectId)
+  //   console.log('double click GG >^^<');
+
+  //   console.log(basculerActivation);
+  // }
+
+
+  
+
+  // useEffect(() => {
+  //   if (active) {
+  //     const targetPosition = new THREE.Vector3();
+  //     scene.getObjectByName(active).getWorldPosition(targetPosition);
+  //     controlsRef.current.setLookAt(
+  //       0,
+  //       0,
+  //       5,
+  //       targetPosition.x,
+  //       targetPosition.y,
+  //       targetPosition.z,
+  //       true
+  //     );
+  //   } else {
+  //     controlsRef.current.setLookAt(0, 0, 10, 0, 0, 0, true);
+  //   }
+  // }, [active]);
+
+  const buttonClick = (objectId) => {
+
+    basculerActivation(objectId)
+  }
+
+  const MonsterStage = ({
+    children,
+    texture,
+    name,
+    color,
+    active,
+    setActive,
+    hovered,
+    setHovered,
+    ...props
+  }) => {
+    const map = useTexture(texture);
+    const portalMaterial = useRef();
+  
+    useFrame((_state, delta) => {
+      const worldOpen = active === name;
+      easing.damp(portalMaterial.current, "blend", worldOpen ? 1 : 0, 0.2, delta);
+    });
+  
+    return (
+      <group {...props}>
+        <Text
+          font="fonts/Caprasimo-Regular.ttf"
+          fontSize={0.2}
+          position={[0, 0, 0.051]}
+          anchorY={"bottom"}
+        >
+          {name}
+          <meshBasicMaterial color={color} toneMapped={false} />
+        </Text>
+        <RoundedBox
+          name={name}
+          args={[1.1, 2, 0.1]}
+          radius={0.2}
+          onDoubleClick={() => {
+            buttonClick(name);
+            console.log(name);
+            console.log(active);
+          }}
+         
+          onPointerEnter={() => setHovered(name)}
+          onPointerLeave={() => setHovered(null)}
+        >
+          <MeshPortalMaterial ref={portalMaterial} side={THREE.DoubleSide}>
+            <ambientLight intensity={1} />
+            <Environment preset="sunset" />
+            {children}
+            <mesh>
+              <sphereGeometry args={[5, 64, 64]} />
+              <meshStandardMaterial map={map} side={THREE.BackSide} />
+            </mesh>
+          </MeshPortalMaterial>
+        </RoundedBox>
+      </group>
+    );
+  };
+
+  
+  
+
+  return (
+    <>
+      
+      <PresentationControls
+      
+      
+      />
+
+
+      {/* <CameraControls
+        ref={controlsRef}
+        maxPolarAngle={Math.PI / 2}
+        minPolarAngle={Math.PI / 6}
+      /> */}
+
+      {/* <Leve01/>
+      <C1 scale={0.25}/>
+      <Leve02/> */}
+
+
+      <MonsterStage
+      position-x={-17.16}
+      position-z={-5.5}
+      position-y={1.4}
+        name="site Vitrine"
+        color="#38adcf"
+        texture={
+          "textures/AdobeStock_226375061.jpeg"
+        }
+        
+        hovered={hovered}
+        setHovered={setHovered}
+        
+      >
+        
+      </MonsterStage>
+      <MonsterStage
+      
+        texture={"textures/anime_art_style_lava_world.jpg"}
+        name="site Boutique"
+        color={"#df8d52"}
+        position={[-20.2,1.4,-2.8]}
+
+        
+        rotation-y={Math.PI / 2.5}
+        
+        
+        setHovered={setHovered}
+      >
+       
+      </MonsterStage>
+      <MonsterStage
+        position={[-13.4,1.4,-2.71]}
+        //{"position":{"x":-13.439999999999994,"y":1.4199999999999977,"z":-2.71}}
+        name="SEO"
+        color="#739d3c"
+        texture={"textures/anime_art_style_cactus_forest.jpg"}
+        
+        rotation-y={-Math.PI / 3.3}
+        
+        hovered={hovered}
+        setHovered={setHovered}
+      >
+        
+      </MonsterStage>
+    </>
+  );
+};
+
+
+
+
+// const MonsterStage = ({
+//   children,
+//   texture,
+//   name,
+//   color,
+//   active,
+//   setActive,
+//   hovered,
+//   setHovered,
+//   ...props
+// }) => {
+//   const map = useTexture(texture);
+//   const portalMaterial = useRef();
+
+//   useFrame((_state, delta) => {
+//     const worldOpen = active === name;
+//     easing.damp(portalMaterial.current, "blend", worldOpen ? 1 : 0, 0.2, delta);
+//   });
+
+//   return (
+//     <group {...props}>
+//       <Text
+//         font="fonts/Caprasimo-Regular.ttf"
+//         fontSize={0.2}
+//         position={[0, 0, 0.051]}
+//         anchorY={"bottom"}
+//       >
+//         {name}
+//         <meshBasicMaterial color={color} toneMapped={false} />
+//       </Text>
+//       <RoundedBox
+//         name={name}
+//         args={[1.1, 2, 0.1]}
+//         radius={0.2}
+//         onDoubleClick={() => {
+//           buttonClick(name);
+//           console.log(name);
+//         }}                
+       
+//         onPointerEnter={() => setHovered(name)}
+//         onPointerLeave={() => setHovered(null)}
+//       >
+//         <MeshPortalMaterial ref={portalMaterial} side={THREE.DoubleSide}>
+//           <ambientLight intensity={1} />
+//           <Environment preset="sunset" />
+//           {children}
+//           <mesh>
+//             <sphereGeometry args={[5, 64, 64]} />
+//             <meshStandardMaterial map={map} side={THREE.BackSide} />
+//           </mesh>
+//         </MeshPortalMaterial>
+//       </RoundedBox>
+//     </group>
+//   );
+// };
+
+
+
+
+function Sphere() {
+
+
+
+    return (
+      <>
+        <mesh position={[-108, 2, -20]}>
+          <sphereBufferGeometry
+
+            args={[1, 5, 5]}
+          >
+
+          </sphereBufferGeometry>
+          <meshStandardMaterial color="white" />
+        </mesh>
+
+        <mesh position={[-110, 2, -20]}>
+          <sphereBufferGeometry
+
+            args={[1, 5, 5]}
+          >
+
+          </sphereBufferGeometry>
+          <meshStandardMaterial color="red" />
+        </mesh>
+
+        <mesh position={[-100, 2, -20]}>
+          <sphereBufferGeometry
+
+            args={[1, 5, 5]}
+          >
+
+          </sphereBufferGeometry>
+          <meshStandardMaterial color="blue" />
+        </mesh>
+
+
+      </>
+
+    );
+
+  }
+
+------------------------------------------------------------------------------------------------------------------------------
+<Physics>
+      <group dispose={null} scale={0.25}>
+        {isGameStarted ? (<>  
+        <primitive position={[-100, 1, -40]} object={new GridHelper(50, 50)} />
+
+
+          <RigidBody type="fixed">
+           <Box position={[-105,1,-20]} args={[10,1,10]}>
+
+           <meshStandardMaterial  side={THREE.DoubleSide} color="springgreen"/>
+           </Box>
+           {/* <Plane position={[-105,1,-20]} args={[10,1,10]} >  </Plane> */}
+          
+          </RigidBody>
+
+          {/* <Game></Game> */}
+
+
+          <RigidBody ref={cube} position={[-105,6,-20]}  >
+           <Box 
+           onPointerEnter={()=>setHover(true)}
+           onpointerleave={()=>setHover(false)}
+           onClick={jump} 
+           
+           
+            >
+
+            <meshStandardMaterial  side={THREE.DoubleSide} color="royalblue"/>
+
+           </Box>
+           {/* <Plane position={[-105,1,-20]} args={[10,1,10]} >  </Plane> */}
+           
+          </RigidBody>
+
+       
+
+
+
+        </>
+
+        ) : (
+          // Afficher le modèle uniquement s'il n'est pas caché
+          <group name="Cube007" position={[-104.33, 4.607, -26.486]}>
+            <mesh
+              name="Cube022"
+              castShadow
+              receiveShadow
+              geometry={nodes.Cube022.geometry}
+              material={materials.level01}
+            />
+            <mesh
+              name="Cube022_1"
+              castShadow
+              receiveShadow
+              geometry={nodes.Cube022_1.geometry}
+              material={materials.level00}
+            />
+          </group>
+        )}
+
+        {!isModelHidden && (
+          <mesh
+            name="Cube075"
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube075.geometry}
+            material={materials.blanc}
+            position={[-116.033, 0.312, -19.739]}
+            onDoubleClick={activateGame}
+          />
+        )}
+      </group>
+    </Physics>
+
+
+
+      {isGameStarted ? (<> <primitive position={[-100, 1, -40]} object={new GridHelper(50, 50)} />
+
+
+          <RigidBody type="fixed">
+           <Box position={[-105,1,-20]} args={[10,1,10]}>
+
+           <meshStandardMaterial  side={THREE.DoubleSide} color="springgreen"/>
+           </Box>
+           {/* <Plane position={[-105,1,-20]} args={[10,1,10]} >  </Plane> */}
+          
+          </RigidBody>
+
+          {/* <Game></Game> */}
+
+
+          <RigidBody ref={cube} position={[-105,6,-20]}  >
+           <Box 
+           onPointerEnter={()=>setHover(true)}
+           onpointerleave={()=>setHover(false)}
+           onClick={jump} 
+           
+           
+            >
+
+            <meshStandardMaterial  side={THREE.DoubleSide} color="royalblue"/>
+
+           </Box>
+           {/* <Plane position={[-105,1,-20]} args={[10,1,10]} >  </Plane> */}
+           
+          </RigidBody>
+
+        ) : ()}
+
+      {!isModelHidden && (
+      
+      )}
+
+
+
+
+       {!isModelHidden && (
+          <mesh
+            name="Cube075"
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube075.geometry}
+            material={materials.blanc}
+            position={[-116.033, 0.312, -19.739]}
+            onDoubleClick={activateGame}
+          />
+        )}
+
+        
+
+        ------lien 
+
+        video 8 bit 
+
+        https://www.vecteezy.com/video/9336874-pixel-twinkling-stars-retro-8-bit-video-game
+
+        https://www.vecteezy.com/video/2972850-retro-8-bit-pixel-white-clouds-on-blue-animated-background
+
+        https://www.vecteezy.com/video/1913565-abstract-retro-style-video-game
+
+
+
+
+        uBigWavesElevation: { value: 0 },
+        uBigWavesFrequency: { value: new THREE.Vector2(4, 1.5) },
+        uBigWavesSpeed: { value: 0.75 },
+
+        uSmallWavesElevation: { value: 0.061 },
+        uSmallWavesFrequency: { value: 2.892 },
+        uSmallWavesSpeed: { value: 0.576 },
+        uSmallIterations: { value: 5 },
+
+        uDepthColor: { value: new THREE.Color('#244225') },
+        uSurfaceColor: { value: new THREE.Color('#00ff04') },
+        uColorOffset: { value: 0.08 },
+        uColorMultiplier: { value: 5 }

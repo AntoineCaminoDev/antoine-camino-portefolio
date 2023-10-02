@@ -1,0 +1,675 @@
+@font-face{
+  font-family: 'eva';
+  src:url('fonts/EVA35Regular.otf')
+}
+
+
+
+
+
+/*--------------*/
+
+html,
+body,
+#root
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); */
+  background: black;
+ 
+  
+
+  -webkit-user-select: none;
+      -webkit-touch-callout: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;-webkit-user-select: none;
+      -webkit-touch-callout: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      overflow-x: hidden; 
+
+
+  /*variable css*/
+  --main-color:#2933FF;
+
+ 
+}
+
+
+/*position fixed marche apparament mais il faut changer la positio absolute qui est fixé sur l'élément */
+.no-scroll {
+  overflow: hidden !important;
+}
+
+
+.htmlScreen {
+  width: 1024px;
+  height: 670px;
+  border: none;
+ position: fixed !important;
+ 
+}
+
+
+.Lv2Screen{
+  width: 2048px;
+  height: 670px;
+  border: none;
+ position: fixed !important;
+ 
+}
+
+.htmlIframe{
+
+  width: 1024px;
+  height: 670px;
+  border: none;
+ position: fixed !important;
+
+}
+
+canvas + div{
+  touch-action: none;
+  
+}
+
+canvas + div div{
+  z-index:3;
+ 
+}
+
+
+
+
+
+.scrollFix{
+  top:0;
+  position: absolute;
+  
+  
+}
+
+
+
+
+.section{
+
+  height: 100vh;
+  width: 100vw;
+  /* padding-left: 2vw; */
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  /* position: relative; */
+  /* top: 0; */
+  background: center no-repeat url("/src/assets/Group 29.jpg");
+
+}
+
+.s1{
+  background-color: blueviolet;
+}
+
+
+
+
+
+
+.number{
+  color:black;
+  font-family: 'eva',sans-serif;
+  font-size: 64px;
+  border-bottom: #2933FF solid 5px;
+  animation: border_anim 3s linear forwards;
+  margin-left: 2vw
+
+}
+
+
+
+
+.number1{
+  color:black;
+  font-family: 'eva',sans-serif;
+  font-size: 64px;
+  border-bottom: #650E8C solid 5px;
+  margin-left: 2vw;
+
+}
+.number2{
+  color:black;
+  font-family: 'eva',sans-serif;
+  font-size: 64px;
+  border-bottom: #0C8500 solid 5px;
+  margin-left: 2vw
+
+}
+.number3{
+  color:black;
+  font-family: 'eva',sans-serif;
+  font-size: 64px;
+  border-bottom: #E4572E solid 5px;
+  margin-left: 2vw
+
+}
+
+
+
+/* intro */
+
+.label1 > div{
+  font-family: 'eva',sans-serif;
+    position: absolute;
+    background: #00000088;
+    color: white;
+    padding: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-radius: 30px;
+    user-select: none;
+    position: fixed ;
+    z-index: 2;
+
+}
+
+/*general style*/
+p{
+  margin-left: 2vw; 
+  font-family: 'eva',sans-serif;
+  font-size: 20px;
+}
+
+
+h1{
+  color:black;
+  font-weight: bold;
+  font-family: 'eva',sans-serif;
+  font-size: 64px;
+  margin-left: 2vw
+}
+
+h2{
+  color:black;
+  font-weight: bold;
+  font-family: 'eva',sans-serif;
+  font-size: 54px;
+  margin-left: 2vw
+
+}
+
+h3{
+  color:black;
+  font-weight: bold;
+  font-family: 'eva',sans-serif;
+  font-size: 44px;
+  margin-left: 0;
+}
+ul{
+  margin-left: 0.5vw
+}
+
+li{
+  color:black;
+  
+  font-family: 'eva',sans-serif;
+  font-size: 20px;
+  padding-top:2vh ;
+  
+}
+
+.btnS1{
+
+  text-align: center;
+  background-color: var(--main-color);
+  margin-top: 5vh;
+  width: 10vw;
+  height: 6vh ;
+  color: var(--main-color);
+  font-family: 'eva',sans-serif;
+  border: solid 3px;
+  
+  border-color: #2933FF;
+  background-color: white;
+ 
+  padding: 0.5em 2em ;
+  margin-left: 2vw;
+} 
+
+.btnS1:hover{
+  background-color: var(--main-color);
+  color:white;
+}
+
+.subtitle{
+  color:black;
+  font-weight: bold;
+  font-family: eva;
+  font-size:30px;
+  margin-top: 0;
+  margin-left: 2vw
+
+}
+
+.text00{
+  font-family: 'eva',sans-serif;
+  font-size: 20px;
+  margin-left: 2vw
+  
+}
+
+
+Copy code
+/* Pour les navigateurs Webkit (Safari et anciennes versions de Chrome) */
+/* Changer la couleur de la scrollbar */
+::-webkit-scrollbar {
+width: 4px; /* Largeur de la scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+background-color: yellow; /* Couleur de la partie mobile de la scrollbar */
+}
+
+/* Pour les navigateurs basés sur Blink (y compris les versions récentes de Chrome et Edge) */
+/* Changer la couleur de la scrollbar */
+::-webkit-scrollbar {
+width: 4px; /* Largeur de la scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+background-color: yellow; /* Couleur de la partie mobile de la scrollbar */
+}
+
+
+
+/*ui*/
+
+.level02Back{
+  background-color: white;
+  width: 15vw;
+  height: 15vh;
+  overflow: auto;
+ 
+}
+
+.level02Back :nth-child(1){
+  display: flex;
+  flex-direction: column;
+
+}
+
+h3{
+  text-align: center;
+}
+h3+div{
+  display: flex;
+  justify-content: space-between;
+}
+
+h3 +div div{
+
+  width: 5vw;
+  height: 5vh;
+  background-color: #650E8C;
+}
+
+.p1:hover{
+  background-color:#DB0A0A;
+}
+
+/*level01*/
+
+.tp-vitrine-enable{
+  display: none;
+  margin-left: 0vw;
+  
+}
+
+.tp-disable{
+  margin-left: 0vw;
+  display: block;
+}
+
+
+.tp-boutique-enable{
+display: none;
+}
+
+.tp-seo-enable{
+  display: none;
+  }
+
+.special{
+  background: no-repeat url("/src/assets/Rectangle.svg");
+
+  background-size: cover;
+  
+  height: 100%;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* //LEVEL3 */
+
+
+
+
+/* //GAME */
+
+.gameUI > p{
+ color: white;
+ 
+ height: 50vh;
+ 
+}
+
+.projet-container{
+ margin-left: 2vw;
+}
+
+.projet{
+  
+  
+  margin-top: 4vh;
+  
+  
+}
+
+.projet div:nth-child(1){
+  
+  height: 22vh;
+  width: 25vw;
+  background: no-repeat url("/src/assets/image 38.jpg");
+  margin-bottom: 2vh;
+  color: white;
+}
+
+
+.projet div:nth-child(2){
+  background: no-repeat url("/src/assets/image 39.jpg");
+ 
+  height: 22vh;
+  width: 25vw;
+  color: white;
+}
+
+
+.projet3{
+  margin-bottom: 5vh;
+}
+
+
+
+
+
+
+/*lv4*/
+
+.reseaux{
+  display: flex;
+  align-items: center;
+  font-family: 'eva',sans-serif;
+  font-size: 20px;
+  margin-left: 2vw;
+  margin-bottom: 4vh;
+}
+
+
+
+.icon {
+  width: 40px; 
+  
+}
+
+a{
+  margin-top: 5vh !important;
+  margin-left: 2vw;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+/*loading */
+
+
+
+
+.loadingScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: inherit;
+  background-image: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 4s;
+  z-index: 4;
+  font-family: "Almendra", serif;
+  background-color: #2933FF;
+}
+
+.loadingScreen--started {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loadingScreen--started .loadingScreen__board {
+  opacity: 0;
+}
+
+
+.intro-logo{
+
+  display: flex;
+}
+
+.intro-logo img:nth-child(1){
+
+  margin-right: 0;
+}
+
+.intro-logo p:nth-child(1){
+
+  color: white;
+  font-size: 45px;
+  font-family: 'eva',sans-serif;
+margin-top: 9vh;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+
+.intro-logo p:nth-child(2){
+
+  color: white;
+  font-size: 25px;
+  font-family: 'eva',sans-serif;
+  margin-left: 0;
+}
+
+
+.loadingScreen__progress {
+  width: 100%;
+  height: 10px; /* Hauteur de la barre de progression */
+  background-color: #ccc; /* Couleur de fond de la barre de progression */
+}
+
+.loadingScreen__progress__value {
+  height: 100%;
+  width: 0; /* La largeur sera ajustée en fonction de la progression */
+  background-color: #ffffff; /* Couleur de remplissage de la barre de progression */
+  transition: width 0.5s; /* Animation de remplissage */
+}
+
+
+
+
+
+
+
+.icon-scroll,
+.icon-scroll::before {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.icon-scroll {
+  width: 40px;
+  height: 70px;
+  border: 2px solid #000000;
+  border-radius: 25px;
+  cursor: pointer;
+  bottom: 2rem;
+}
+
+.icon-scroll::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #000000;
+  margin-left: -4px;
+  top: 15px;
+  border-radius: 50%;
+  animation: 1.5s scroll cubic-bezier(0.65, -0.55, 0.25, 1.5) infinite;
+}
+
+@keyframes scroll {
+  0% {
+      opacity: 0;
+      transform: translateY(0) scale(0.5);
+  }
+  10% {
+      opacity: 1;
+      transform: scale(1);
+  }
+  100% {
+      opacity: 0;
+      transform: translateY(30px) scale(0.5);
+  }
+}
+
+
+
+
+
+
+.test55{
+  background-color: #DB0A0A;
+  width: 10vw;
+  height: 10vh;
+}
+
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  right: 300px; /* Masquer le menu à droite */
+  width: 300px;
+  height: 100%;
+  background-color: white;
+  transition: right 0.3s ease; /* Animation de transition */
+  z-index: -2;
+}
+
+.menu-container.open {
+  right: -300px; /* Afficher le menu en déplaçant vers la gauche */
+}
+
+.hamburger {
+  cursor: pointer;
+  padding: 10px;
+  
+  background-color: #DB0A0A;
+  position: fixed !important;
+  overflow-y: hidden;
+  z-index: 4; /* Pour s'assurer que le hamburger est au-dessus de tout le contenu */
+}
+
+
+.tetetete{
+
+ z-index: -2;
+}
+
+/*responsive*/
+
+@media (max-width: 1280px) {
+  .section {
+    max-width: 450px; /* Changez la valeur de max-width pour les écrans de 1280 pixels ou moins */
+  }
+
+  h1{
+    font-size: 50px;
+  }
+  h2{
+    
+    font-size: 34px;
+  }
+  h3{
+    font-size: 24px;
+  }
+
+  p{
+    font-size: 18px;
+  }
+
+  .subtitle{
+    font-size: 24px;
+  }
+
+  li{
+    font-size: 18px;
+    
+  }
+
+  ul{
+    margin-left: 0vw;
+  }
+
+  img{
+    width: 30vw;
+  }
+
+  .projet-container {
+    margin-left: 0.5vw;
+}
+
+.reseaux{
+  margin-top: 2vh;
+}
+
+
+.intro-logo img:nth-child(1){
+
+  margin-right: 0;
+  width: 15vw;
+}
+
+}
+
+
+
