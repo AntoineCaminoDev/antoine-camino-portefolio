@@ -365,7 +365,7 @@ const ContactSection = () => {
                 }}
                     class="icon"
                     src="/src/assets/linkedin.png"
-                    alt="Grapefruit slice atop a pile of other slices"
+                    alt="logo linkedin"
                 />
                 </div>
                 <div> <motion.a initial={{
@@ -396,7 +396,7 @@ const ContactSection = () => {
                 }}
                     class="icon"
                     src="/src/assets/twitter.png"
-                    alt="Grapefruit slice atop a pile of other slices"
+                    alt="logo twitter"
                 />
                 </div>
                 <div><motion.a initial={{
@@ -428,7 +428,7 @@ const ContactSection = () => {
                 }}
                     class="icon"
                     src="/src/assets/email.png"
-                    alt="Grapefruit slice atop a pile of other slices"
+                    alt="logo email"
                 />
                 </div>
                 <div><motion.a initial={{
