@@ -18,7 +18,7 @@ export default function LoadingScreen({ onStarted }) {
         <div className={`loadingScreen ${started ? "loadingScreen--started" : ""}`}>
             <div>
                 <div className="intro-logo">
-                    <img src="/src/assets/logo.svg" alt="Logo" />
+                    <img src="./logo.svg" alt="Logo" />
                     <div>
                         <p>lunatic</p>
                         <p>des solutions pour vos envies</p>
