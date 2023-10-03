@@ -364,7 +364,7 @@ export const Experience = (props) => {
       global
       polar={[0, 0]}
 
-      azimuth={(Activated === true) ? [0, 0] : [-0.8, 0.8]}
+      azimuth={(Activated === true) ? [0, 0] : [-0.5, 0.8]}
     >
 
 

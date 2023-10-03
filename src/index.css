@@ -123,7 +123,7 @@ canvas + div div{
 
 
 .number{
-  color:rgb(188, 182, 182);
+  color:white;
   font-family: 'eva',sans-serif;
   font-size: 64px;
   border-bottom: #2933FF solid 5px;
@@ -251,7 +251,7 @@ li{
 }
 
 .subtitle{
-  color:black;
+  color:white;
   font-weight: bold;
   font-family: eva;
   font-size:30px;
@@ -535,15 +535,15 @@ margin-top: 9vh;
 
 .icon-scroll,
 .icon-scroll::before {
-  position: absolute;
+  
   left: 50%;
-  transform: translateX(-50%);
+  
 }
 
 .icon-scroll {
   width: 40px;
   height: 70px;
-  border: 2px solid #000000;
+  border: 2px solid #ffffff;
   border-radius: 25px;
   cursor: pointer;
   bottom: 2rem;
@@ -553,7 +553,7 @@ margin-top: 9vh;
   content: '';
   width: 8px;
   height: 8px;
-  background: #000000;
+  background: #ffffff;
   margin-left: -4px;
   top: 15px;
   border-radius: 50%;

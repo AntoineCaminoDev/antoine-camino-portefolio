@@ -54,31 +54,6 @@ export default function Level03({ basculerActivation }, objectId, props) {
 
   }
 
-  // quitte le  jeu avec echap
-  useEffect(() => {
-    const handleKeyPress = (event) => {
-      if (event.key === "Escape") {
-        // Appuyer sur "Échap" arrête le jeu
-        setIsGameStarted(false);
-        setIsModelHidden(false);
-
-        //ui
-        document.querySelectorAll("section").forEach(function (section) {
-          section.style.backgroundColor = "white";
-        });
-
-        document.getElementsByClassName("lv3UI")[0].style.display = "block";
-        document.getElementsByClassName("gameUI")[0].style.display = "none";
-
-      }
-    };
-
-    window.addEventListener("keydown", handleKeyPress);
-
-    return () => {
-      window.removeEventListener("keydown", handleKeyPress);
-    };
-  }, []);
 
   //activé le jeu
   const activateGame = () => {
