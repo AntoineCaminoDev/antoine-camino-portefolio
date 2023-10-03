@@ -1,6 +1,6 @@
 @font-face{
   font-family: 'eva';
-  src:url('fonts/EVA35Regular.otf')
+  src:url('./public/font/EVA35Regular.otf')
 }
 
 
@@ -395,14 +395,14 @@ display: none;
   
   height: 22vh;
   width: 25vw;
-  background: no-repeat url("/src/assets/image 38.jpg");
+ 
   margin-bottom: 2vh;
   color: white;
 }
 
 
 .projet div:nth-child(2){
-  background: no-repeat url("/src/assets/image 39.jpg");
+
  
   height: 22vh;
   width: 25vw;

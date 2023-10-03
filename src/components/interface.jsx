@@ -275,7 +275,7 @@ const ProjetSection = () => {
                         delay: 1.5,
                     },
                 }} className="projet3" href="https://www.domaine-de-rodachristo.fr/" target="_blank">
-                        <img src="/src/assets/image 38.jpg" alt="Description de l'image" />
+                        <img src="./src/assets/rodachristo.jpg" alt="Description de l'image" />
                     </motion.a >
                     <motion.a  initial={{
                     opacity: 0,
@@ -289,7 +289,7 @@ const ProjetSection = () => {
                         delay: 2,
                     },
                 }} className="projet3" href="https://www.antoine-camino.fr/" target="_blank">
-                        <img src="/src/assets/image 39.jpg" alt="Description de l'image" />
+                        <img src="./src/assets/site perso.jpg" alt="Description de l'image" />
                     </motion.a >
 
 
@@ -364,7 +364,7 @@ const ContactSection = () => {
                     },
                 }}
                     class="icon"
-                    src="/src/assets/linkedin.png"
+                    src="./linkedin.png"
                     alt="logo linkedin"
                 />
                 </div>
@@ -395,7 +395,7 @@ const ContactSection = () => {
                     },
                 }}
                     class="icon"
-                    src="/src/assets/twitter.png"
+                    src="./twitter.png"
                     alt="logo twitter"
                 />
                 </div>
@@ -427,7 +427,7 @@ const ContactSection = () => {
                     },
                 }}
                     class="icon"
-                    src="/src/assets/email.png"
+                    src="./email.png"
                     alt="logo email"
                 />
                 </div>
