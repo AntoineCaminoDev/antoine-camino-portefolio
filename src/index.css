@@ -1,6 +1,6 @@
 @font-face{
   font-family: 'eva';
-  src:url('./public/font/EVA35Regular.otf')
+  src:url('./font/EVA35Regular.otf')
 }
 
 
@@ -106,7 +106,7 @@ canvas + div div{
   max-width: 600px;
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.5);
   /* position: relative; */
   /* top: 0; */
   /* background: center no-repeat url("./assets/Group 29.jpg"); */
@@ -123,7 +123,7 @@ canvas + div div{
 
 
 .number{
-  color:black;
+  color:rgb(188, 182, 182);
   font-family: 'eva',sans-serif;
   font-size: 64px;
   border-bottom: #2933FF solid 5px;
@@ -136,7 +136,7 @@ canvas + div div{
 
 
 .number1{
-  color:black;
+  color:white;
   font-family: 'eva',sans-serif;
   font-size: 64px;
   border-bottom: #650E8C solid 5px;
@@ -144,7 +144,7 @@ canvas + div div{
 
 }
 .number2{
-  color:black;
+  color:white;
   font-family: 'eva',sans-serif;
   font-size: 64px;
   border-bottom: #0C8500 solid 5px;
@@ -152,7 +152,7 @@ canvas + div div{
 
 }
 .number3{
-  color:black;
+  color:white;
   font-family: 'eva',sans-serif;
   font-size: 64px;
   border-bottom: #E4572E solid 5px;
@@ -184,11 +184,12 @@ p{
   margin-left: 2vw; 
   font-family: 'eva',sans-serif;
   font-size: 20px;
+  color:white;
 }
 
 
 h1{
-  color:black;
+  color:white;
   font-weight: bold;
   font-family: 'eva',sans-serif;
   font-size: 64px;
@@ -196,7 +197,7 @@ h1{
 }
 
 h2{
-  color:black;
+  color:white;
   font-weight: bold;
   font-family: 'eva',sans-serif;
   font-size: 54px;
@@ -205,22 +206,24 @@ h2{
 }
 
 h3{
-  color:black;
+  color:white;
   font-weight: bold;
   font-family: 'eva',sans-serif;
   font-size: 44px;
   margin-left: 0;
 }
 ul{
+  color:white;
   margin-left: 0.5vw
 }
 
 li{
-  color:black;
+  color:white;
   
   font-family: 'eva',sans-serif;
   font-size: 20px;
   padding-top:2vh ;
+  padding-right:1vw ;
   
 }
 

@@ -271,7 +271,7 @@ const Portal = ({
     <group {...props}>
       <Text
         font="fonts/EVA35Regular.otf"
-        fontSize={0.18}
+        fontSize={0.16}
         position={[0, -0.5, 0.051]}
         anchorY={"bottom"}
       >
