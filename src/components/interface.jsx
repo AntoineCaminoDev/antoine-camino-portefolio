@@ -138,7 +138,7 @@ const LandingSection = () => {
             </motion.button> */}
 
             <div class="container">
-                <div class="icon-scroll"></div>
+            <div class='icon-scroll'></div>
             </div>
 
         </Section>

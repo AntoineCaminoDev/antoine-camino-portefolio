@@ -1,6 +1,6 @@
 import { Canvas } from "@react-three/fiber";
 import { Experience } from "./components/Experience";
-import { Scroll, ScrollControls, Stars } from '@react-three/drei'
+import { Scroll, ScrollControls, Stars,Loader } from '@react-three/drei'
 import {  useState,Suspense,useRef } from "react";
 
 
@@ -51,8 +51,8 @@ function App() {
             
         </Canvas>
         
-        {/* <Loader/> */}
-        <LoadingScreen/>
+        <Loader/>
+        {/* <LoadingScreen/> */}
 
         
     
