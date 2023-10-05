@@ -276,7 +276,7 @@ width: 4px; /* Largeur de la scrollbar */
 }
 
 ::-webkit-scrollbar-thumb {
-background-color: yellow; /* Couleur de la partie mobile de la scrollbar */
+background-color: rgb(226, 226, 226); /* Couleur de la partie mobile de la scrollbar */
 }
 
 /* Pour les navigateurs basés sur Blink (y compris les versions récentes de Chrome et Edge) */
@@ -286,7 +286,7 @@ width: 4px; /* Largeur de la scrollbar */
 }
 
 ::-webkit-scrollbar-thumb {
-background-color: yellow; /* Couleur de la partie mobile de la scrollbar */
+background-color: rgb(226, 226, 226); /* Couleur de la partie mobile de la scrollbar */
 }
 
 

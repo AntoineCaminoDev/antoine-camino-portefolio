@@ -35,37 +35,22 @@ export const Experience = (props) => {
   const [hovered,sethovered]=useState(null)
   // Étape 2: Définir une fonction pour basculer l'état lorsque vous cliquez sur l'image
 
+  
+
   const basculerActivation = (objectId, zIndexRange) => {
     setClickedMesh(objectId)
     setActivated(!Activated)
     setZIndexRange(zIndexRange)
     sethovered(!hovered)
 
+   
 
   };
 
-  function disableScroll() {
-    // Stockez la position actuelle de la fenêtre
-    const scrollX = window.scrollX;
-    const scrollY = window.scrollY;
-  
-    // Empêchez le scroll en fixant la position de défilement
-    document.body.style.overflow = 'hidden';
-    window.scrollTo(scrollX, scrollY);
-  }
-  
-  function enableScroll() {
-    // Réactivez le scroll en rétablissant le défilement normal
-    document.body.style.overflow = 'auto';
-  }
-  
-  // ...
-  
-  if (Activated === true) {
-    disableScroll();
-  } else {
-    enableScroll();
-  }
+
+ 
+ 
+
 
  
  
@@ -91,7 +76,7 @@ export const Experience = (props) => {
         targetX = 20.5;
         targetY = 0;
       } else if (section === 3) {
-        targetX = 30;
+        targetX = 29;
         targetY = 0;
       }
 
@@ -112,6 +97,8 @@ export const Experience = (props) => {
 
 
   if (Activated === true && clickedMesh === "mesh1") {
+
+   
 
     useFrame((state) => {
 

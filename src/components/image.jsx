@@ -21,22 +21,15 @@ export default function Image({ basculerActivation }, props) {
 
  
 
-  // const { position } = useControls({
-  //   position: {
-  //     value: { x: 0, y: -0.1, z: 0.66 },
-  //     step: 0.01
-  //   }
-  // })
-  
-// position.x,position.y,position.z
 
-//onPointerEnter={()=}
+
   const buttonClick = (objectId) => {
 
     basculerActivation(objectId)
     
   }
- 
+
+
 
   return (
     <>
