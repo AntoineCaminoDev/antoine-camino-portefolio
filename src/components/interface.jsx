@@ -347,7 +347,7 @@ const ContactSection = () => {
 
 
             >
-                retrouver moi sur mes differents reseaux
+                retrouvez moi sur mes differents réseaux
 
             </motion.p>
 
